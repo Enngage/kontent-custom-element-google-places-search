@@ -10,8 +10,9 @@ function initCustomElement () {
 
       // Setup with initial value and disabled state
       var initialValue = JSON.parse(element.value)
-      initGooglePlacesAutocomplete(element.config, initialValue);
-
+      if(validateConfig(element.config)) {
+        initGooglePlacesAutocomplete(element.config, initialValue);
+      }
       setDisabledState(element.disabled);
 
       CustomElement.onDisabledChanged((disabled) => {
@@ -105,6 +106,31 @@ function changePosition(map, chosenPlace, isDefault) {
 function setDisabledState(disabled) {
   document.getElementById("places-search").disabled = disabled;
   document.getElementById("clear-button").disabled = disabled;
+}
+
+function validateConfig(config) {
+  var hasConfig = !!config;
+  var hasGoogleApiKey = hasConfig && !!config.googleApiKey;
+  var hasCenter = hasConfig && !!config.center;
+  var hasCoords = hasCenter && !!config.center.lat && !!config.center.lng;
+
+  if(!hasConfig || !hasGoogleApiKey || !hasCenter || !hasCoords) {
+    var errors = "<div style=\"margin:8px\"><p>Google Places Search element configuration invalid. Please correct the following:</p><p>";
+    if(!hasConfig) errors += "<span class=\"item-status item-status--failed\">Configuration required</span><br>"
+    if(!hasGoogleApiKey) errors += "<span class=\"item-status item-status--failed\">Google API key required</span>"
+    if(!hasCenter || !hasCoords) errors += "<span class=\"item-status item-status--failed\">Default map center latitude and longitude required</span>"
+    errors += "</p>";
+    errors += "<p><a href=\"https://github.com/ChristopherJennings/google-places-search-element#json-parameters\">See documentation for full details.</a></p></div>"
+
+    var errorsElement = document.getElementById('errors');
+    errorsElement.innerHTML = errors;
+
+    var googlePlacesElement = document.getElementById('google-places-element');
+    googlePlacesElement.style.display = "none";
+    return false;
+  }
+
+  return true;
 }
 
 initCustomElement();

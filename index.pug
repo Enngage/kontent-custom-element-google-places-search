@@ -4,12 +4,11 @@ block head-extension
   - var title  = 'Google Places Search';
 
 block content
-  .form-group
-    .form__input-with-buttons-wrapper
-      input#places-search(type="text", name="places-search", class="form__text-field")
-      button#clear-button.form__icon-btn
-        i.icon-remove
-
-  #map
-
-  //- script(src="", async, defer)
+  #errors
+  #google-places-element
+    .form-group
+      .form__input-with-buttons-wrapper
+        input#places-search(type="text", name="places-search", class="form__text-field")
+        button#clear-button.form__icon-btn
+          i.icon-remove
+    #map
