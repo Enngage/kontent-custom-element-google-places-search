@@ -44,3 +44,8 @@ The JSON object returned from the Deliver API matches the following signature:
 ## Getting API Keys
 
 This custom element requires the use of Google's places and maps APIs. Follow the [instructions in Google's documentation](https://developers.google.com/places/web-service/get-api-key) to get a proper key.
+
+## Developing
+The Google Places Search element source code is available in [this repository](https://github.com/christopherjennings/google-places-search-element).
+
+If you want to adjust the implementation, first download [Kentico Cloud Custom Elements Devkit](https://github.com/kentico/custom-element-devkit). Source code of this selector needs be positioned within `/client/custom-elements` folder. For further instructions on devkit implementation, please refer to [Custom Element Devkit README](https://github.com/Kentico/custom-element-devkit/blob/master/readme.md).
