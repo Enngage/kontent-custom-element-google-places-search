@@ -54,7 +54,7 @@ function initGooglePlacesAutocomplete(config, initialValue) {
     var placesSearch = new google.maps.places.Autocomplete(placesSearchElement);
     placesSearch.addListener('place_changed', () => {
       var place = placesSearch.getPlace();
-      if(place && place.geometry) {
+      if(placesSearchElement.value && place && place.geometry) {
         var chosenPlace = {
           name: place.formatted_address,
           position: place.geometry.location
