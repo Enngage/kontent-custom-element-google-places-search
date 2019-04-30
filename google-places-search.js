@@ -120,7 +120,7 @@ function validateConfig(config) {
     if(!hasGoogleApiKey) errors += "<span class=\"item-status item-status--failed\">Google API key required</span>"
     if(!hasCenter || !hasCoords) errors += "<span class=\"item-status item-status--failed\">Default map center latitude and longitude required</span>"
     errors += "</p>";
-    errors += "<p><a href=\"https://github.com/ChristopherJennings/google-places-search-element#json-parameters\">See documentation for full details.</a></p></div>"
+    errors += "<p><a href=\"https://github.com/ChristopherJennings/google-places-search-element#json-parameters\" target=\"_blank\">See documentation for full details.</a></p></div>"
 
     var errorsElement = document.getElementById('errors');
     errorsElement.innerHTML = errors;
