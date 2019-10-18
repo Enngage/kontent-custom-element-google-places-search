@@ -1,6 +1,6 @@
-# Google Places Geo-location Selector Kentico Cloud Custom Element
+# Google Places Geo-location Selector Custom Element for Kentico Kontent
 
-This is a [custom element](https://developer.kenticocloud.com/docs/integrating-content-editing-features) for [Kentico Cloud](https://kenticocloud.com) that allows users to easily get the geo-coordinates for a location using the Google Places API.
+This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows users to easily get the geo-coordinates for a location using the Google Places API.
 
 ![Screenshot](screenshot.png)
 
@@ -9,7 +9,7 @@ This is a [custom element](https://developer.kenticocloud.com/docs/integrating-c
 You can get started quickly using the currently version currently deployed to GitHub Pages. I do not recommend using this for anything other than **quick testing only**.
 
 1. [Get Google API keys](#getting-api-keys)
-1. Follow the instructions in the [Kentico Cloud documentation](https://developer.kenticocloud.com/docs/integrating-content-editing-features#section-3-displaying-a-custom-element-in-kentico-cloud) to add the element to a content model using <https://kentico.github.io/custom-element-samples/GooglePlacesSearch/> as the `Hosted code URL` and pass your configuration details via [JSON Parameters configuration](#json-parameters).
+1. Follow the instructions in the [Kentico Kontent documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features#a-3--displaying-a-custom-element-in-kentico-kontent) to add the element to a content model using <https://kentico.github.io/kontent-custom-element-samples/GooglePlacesSearch/> as the `Hosted code URL` and pass your configuration details via [JSON Parameters configuration](#json-parameters).
 
 ## JSON Parameters
 
@@ -46,6 +46,6 @@ The JSON object returned from the Deliver API matches the following signature:
 This custom element requires the use of Google's places and maps APIs. Follow the [instructions in Google's documentation](https://developers.google.com/places/web-service/get-api-key) to get a proper key.
 
 ## Developing
-The Google Places Search element source code is available in [this repository](https://github.com/christopherjennings/google-places-search-element).
+The Google Places Search element source code is available in [this repository](kontent-custom-element-google-places-search).
 
 If you want to adjust the implementation, first download [Kentico Cloud Custom Elements Devkit](https://github.com/kentico/custom-element-devkit). Source code of this selector needs be positioned within `/client/custom-elements` folder. For further instructions on devkit implementation, please refer to [Custom Element Devkit README](https://github.com/Kentico/custom-element-devkit/blob/master/readme.md).
