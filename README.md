@@ -1,4 +1,5 @@
 # Google Places Geo-location Selector Custom Element for Kentico Kontent
+[![Netlify Status](https://api.netlify.com/api/v1/badges/927241b2-d3a6-483d-8038-247afeda033e/deploy-status)](https://app.netlify.com/sites/kontent-google-places-search/deploys)
 
 This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows users to easily get the geo-coordinates for a location using the Google Places API.
 
@@ -9,7 +10,13 @@ This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integr
 You can get started quickly using the currently version currently deployed to GitHub Pages. I do not recommend using this for anything other than **quick testing only**.
 
 1. [Get Google API keys](#getting-api-keys)
-1. Follow the instructions in the [Kentico Kontent documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features#a-3--displaying-a-custom-element-in-kentico-kontent) to add the element to a content model using <https://kentico.github.io/kontent-custom-element-samples/GooglePlacesSearch/> as the `Hosted code URL` and pass your configuration details via [JSON Parameters configuration](#json-parameters).
+1. Follow the instructions in the [Kentico Kontent documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features#a-3--displaying-a-custom-element-in-kentico-kontent) to add the element to a content model using <https://kontent-google-places-search.netlify.com/> as the `Hosted code URL` and pass your configuration details via [JSON Parameters configuration](#json-parameters).
+
+## Deploying
+
+Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your GitHub account as well.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ChristopherJennings/kontent-custom-element-google-places-search)
 
 ## JSON Parameters
 
